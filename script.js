@@ -1,7 +1,8 @@
+const horas = document.getElementById('hh');
+const minutos = document.getElementById('mm');
+const segundos = document.getElementById('ss');
+
 const currentTime = () => {
-    const horas = document.getElementById('hh');
-    const minutos = document.getElementById('mm');
-    const segundos = document.getElementById('ss');
 
     let date = new Date();
     let hh = date.getHours();
@@ -12,9 +13,9 @@ const currentTime = () => {
     mm = mm < 10 ? `0${mm}` : mm;
     ss = ss < 10 ? `0${ss}` : ss;
 
-    horas.textContent = hh;
-    minutos.textContent = mm;
-    segundos.textContent = ss;
+    horas.innerText = hh;
+    minutos.innerText = mm;
+    segundos.innerText = ss;
 }
 
 currentTime();
